@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Dashboard - SkillBridge</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="dashboard-body">
+    <nav class="navbar dashboard-nav">
+        <div class="container">
+            <a href="index.html" class="logo">SkillBridge</a>
+            <div class="nav-right">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search for services...">
+                </div>
+                <div class="nav-icons">
+                    <div class="notification-bell">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">3</span>
+                    </div>
+                    <div class="messages-icon">
+                        <i class="fas fa-envelope"></i>
+                        <span class="notification-badge">2</span>
+                    </div>
+                </div>
+                <div class="user-menu">
+                    <div class="user-info">
+                        <img src="https://ui-avatars.com/api/?name=John+Doe&background=0D8ABC&color=fff" alt="Profile" class="user-avatar">
+                        <span class="user-name">John Doe</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <ul class="dropdown">
+                        <li><a href="profile.html"><i class="fas fa-user-circle"></i> My Profile</a></li>
+                        <li><a href="#settings"><i class="fas fa-cog"></i> Settings</a></li>
+                        <li><a href="#help"><i class="fas fa-question-circle"></i> Help Center</a></li>
+                        <li class="divider"></li>
+                        <li><a href="index.html" class="logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <aside class="dashboard-sidebar">
+            <div class="sidebar-header">
+                <span class="welcome-text">Welcome back,</span>
+                <h3>John Doe</h3>
+            </div>
+            <ul class="sidebar-menu">
+                <li class="active">
+                    <a href="#overview"><i class="fas fa-th-large"></i> Overview</a>
+                </li>
+                <li>
+                    <a href="#bookings"><i class="fas fa-calendar-check"></i> My Bookings</a>
+                </li>
+                <li>
+                    <a href="#messages"><i class="fas fa-comments"></i> Messages</a>
+                </li>
+                <li>
+                    <a href="#payments"><i class="fas fa-credit-card"></i> Payments</a>
+                </li>
+                <li>
+                    <a href="#reviews"><i class="fas fa-star"></i> My Reviews</a>
+                </li>
+                <li>
+                    <a href="#addresses"><i class="fas fa-map-marker-alt"></i> Addresses</a>
+                </li>
+            </ul>
+            <div class="sidebar-footer">
+                <div class="help-card">
+                    <i class="fas fa-headset"></i>
+                    <h4>Need Help?</h4>
+                    <p>Contact our 24/7 customer support</p>
+                    <button class="btn btn-outline btn-sm">Contact Support</button>
+                </div>
+            </div>
+        </aside>
+
+        <main class="dashboard-main">
+            <div class="dashboard-header">
+                <div class="header-content">
+                    <h1>Dashboard Overview</h1>
+                    <p class="text-muted">Here's what's happening with your service bookings</p>
+                </div>
+                <div class="quick-actions">
+                    <button class="btn btn-outline"><i class="fas fa-filter"></i> Filter</button>
+                    <button class="btn btn-primary"><i class="fas fa-plus"></i> Book New Service</button>
+                </div>
+            </div>
+
+            <div class="dashboard-stats">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <div class="stat-details">
+                        <h3>Active Bookings</h3>
+                        <p class="stat-value">5</p>
+                        <p class="stat-change positive">
+                            <i class="fas fa-arrow-up"></i>
+                            +2 from last month
+                        </p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-details">
+                        <h3>Hours Booked</h3>
+                        <p class="stat-value">24</p>
+                        <p class="stat-change positive">
+                            <i class="fas fa-arrow-up"></i>
+                            +8 from last month
+                        </p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <div class="stat-details">
+                        <h3>Total Spent</h3>
+                        <p class="stat-value">$580</p>
+                        <p class="stat-change neutral">
+                            <i class="fas fa-minus"></i>
+                            Same as last month
+                        </p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="stat-details">
+                        <h3>Average Rating</h3>
+                        <p class="stat-value">4.8</p>
+                        <p class="stat-change positive">
+                            <i class="fas fa-arrow-up"></i>
+                            +0.2 from last month
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <section class="upcoming-services">
+                <div class="section-header">
+                    <div class="header-left">
+                        <h2>Upcoming Services</h2>
+                        <p class="text-muted">Your next 7 days of scheduled services</p>
+                    </div>
+                    <div class="header-right">
+                        <div class="view-options">
+                            <button class="btn btn-icon active"><i class="fas fa-th-large"></i></button>
+                            <button class="btn btn-icon"><i class="fas fa-list"></i></button>
+                        </div>
+                        <a href="#" class="btn btn-link">View Calendar <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="service-cards">
+                    <div class="service-card upcoming">
+                        <div class="service-date">
+                            <span class="day">15</span>
+                            <span class="month">Feb</span>
+                        </div>
+                        <div class="service-info">
+                            <h3>House Cleaning</h3>
+                            <p class="provider">
+                                <i class="fas fa-user-check"></i>
+                                Clean Pro Services
+                            </p>
+                            <p class="time">
+                                <i class="fas fa-clock"></i>
+                                09:00 AM - 11:00 AM
+                            </p>
+                            <p class="location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                123 Main St, Apt 4B
+                            </p>
+                        </div>
+                        <div class="service-actions">
+                            <button class="btn btn-primary">
+                                <i class="fas fa-info-circle"></i>
+                                Information
+                            </button>
+                            <button class="btn btn-outline">
+                                <i class="fas fa-calendar-alt"></i>
+                                Reschedule
+                            </button>
+                        </div>
+                    </div>
+                    <div class="service-card upcoming">
+                        <div class="service-date">
+                            <span class="day">18</span>
+                            <span class="month">Feb</span>
+                        </div>
+                        <div class="service-info">
+                            <h3>Plumbing Repair</h3>
+                            <p class="provider">
+                                <i class="fas fa-user-check"></i>
+                                Quick Fix Plumbing
+                            </p>
+                            <p class="time">
+                                <i class="fas fa-clock"></i>
+                                02:00 PM - 04:00 PM
+                            </p>
+                            <p class="location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                123 Main St, Apt 4B
+                            </p>
+                        </div>
+                        <div class="service-actions">
+                            <button class="btn btn-primary">
+                                <i class="fas fa-info-circle"></i>
+                                Details
+                            </button>
+                            <button class="btn btn-outline">
+                                <i class="fas fa-calendar-alt"></i>
+                                Reschedule
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="dashboard-grid">
+                <section class="recent-activity">
+                    <div class="section-header">
+                        <h2>Recent Activity</h2>
+                        <a href="#" class="btn btn-link">View All</a>
+                    </div>
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <div class="activity-icon green">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="activity-content">
+                                <p>Booking confirmed for Electrical Repair</p>
+                                <span class="activity-time">2 hours ago</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon blue">
+                                <i class="fas fa-comment"></i>
+                            </div>
+                            <div class="activity-content">
+                                <p>New message from Elite Cleaning Services</p>
+                                <span class="activity-time">5 hours ago</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon orange">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="activity-content">
+                                <p>You received a 5-star rating from Pro Painters</p>
+                                <span class="activity-time">Yesterday</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="recommended-services">
+                    <div class="section-header">
+                        <h2>Recommended Services</h2>
+                        <p>Based on your preferences and booking history</p>
+                    </div>
+                    <div class="recommended-grid">
+                        <div class="recommended-card">
+                            <div class="service-image">
+                                <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3" alt="Home Cleaning">
+                                <span class="service-badge">Popular</span>
+                            </div>
+                            <div class="service-content">
+                                <h3 class="service-title">Premium Home Cleaning</h3>
+                                <div class="service-provider">
+                                    <img src="https://ui-avatars.com/api/?name=Elite+Cleaning&background=4CAF50&color=fff" alt="Provider" class="provider-avatar">
+                                    <span class="provider-name">Elite Cleaning Services</span>
+                                </div>
+                                <div class="service-rating">
+                                    <div class="rating-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <span class="rating-count">(128)</span>
+                                </div>
+                                <div class="service-price">
+                                    <div>
+                                        <span class="price-amount">$80</span>
+                                        <span class="price-unit">/ session</span>
+                                    </div>
+                                    <button class="book-button">Book Now</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="recommended-card">
+                            <div class="service-image">
+                                <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3" alt="Plumbing Service">
+                                <span class="service-badge">Best Rated</span>
+                            </div>
+                            <div class="service-content">
+                                <h3 class="service-title">Emergency Plumbing</h3>
+                                <div class="service-provider">
+                                    <img src="https://ui-avatars.com/api/?name=Quick+Fix&background=2196F3&color=fff" alt="Provider" class="provider-avatar">
+                                    <span class="provider-name">Quick Fix Plumbing</span>
+                                </div>
+                                <div class="service-rating">
+                                    <div class="rating-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="rating-count">(89)</span>
+                                </div>
+                                <div class="service-price">
+                                    <div>
+                                        <span class="price-amount">$120</span>
+                                        <span class="price-unit">/ hour</span>
+                                    </div>
+                                    <button class="book-button">Book Now</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="recommended-card">
+                            <div class="service-image">
+                                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3" alt="Interior Design">
+                                <span class="service-badge">New</span>
+                            </div>
+                            <div class="service-content">
+                                <h3 class="service-title">Interior Design Consultation</h3>
+                                <div class="service-provider">
+                                    <img src="https://ui-avatars.com/api/?name=Modern+Spaces&background=FF5722&color=fff" alt="Provider" class="provider-avatar">
+                                    <span class="provider-name">Modern Spaces Design</span>
+                                </div>
+                                <div class="service-rating">
+                                    <div class="rating-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <span class="rating-count">(45)</span>
+                                </div>
+                                <div class="service-price">
+                                    <div>
+                                        <span class="price-amount">$150</span>
+                                        <span class="price-unit">/ consultation</span>
+                                    </div>
+                                    <button class="book-button">Book Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

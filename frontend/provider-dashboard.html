@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Provider Dashboard - SkillBridge</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="dashboard-body">
+    <nav class="navbar dashboard-nav">
+        <div class="container">
+            <a href="index.html" class="logo">SkillBridge</a>
+            <div class="nav-right">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search...">
+                </div>
+                <div class="nav-icons">
+                    <div class="notification-bell">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">3</span>
+                    </div>
+                    <div class="messages-icon">
+                        <i class="fas fa-envelope"></i>
+                        <span class="notification-badge">2</span>
+                    </div>
+                    <div class="user-menu">
+                        <div class="user-info">
+                            <img src="https://ui-avatars.com/api/?name=John+Doe&background=0D8ABC&color=fff" alt="Profile" class="user-avatar">
+                            <span class="user-name">John Doe</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <ul class="dropdown">
+                            <li><a href="provider-profile.html"><i class="fas fa-user-circle"></i> Profile</a></li>
+                            <li><a href="provider-settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+                            <li><a href="#help"><i class="fas fa-question-circle"></i> Help Center</a></li>
+                            <li class="divider"></li>
+                            <li><a href="login.html" class="logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <aside class="dashboard-sidebar">
+            <div class="sidebar-header">
+                <span class="welcome-text">Welcome back,</span>
+                <h3>John Doe</h3>
+                <p class="status-text"><i class="fas fa-circle online"></i> Online</p>
+            </div>
+            <ul class="sidebar-menu">
+                <li class="active">
+                    <a href="provider-dashboard.html">
+                        <i class="fas fa-th-large"></i> Dashboard
+                    </a>
+                </li>
+                <li>
+                    <a href="provider-services.html">
+                        <i class="fas fa-tools"></i> My Services
+                        <span class="menu-badge">12</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="provider-bookings.html">
+                        <i class="fas fa-calendar-alt"></i> Bookings
+                        <span class="menu-badge">5</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="provider-earnings.html">
+                        <i class="fas fa-wallet"></i> Earnings
+                    </a>
+                </li>
+                <li>
+                    <a href="provider-reviews.html">
+                        <i class="fas fa-star"></i> Reviews
+                        <span class="menu-badge">28</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="provider-analytics.html">
+                        <i class="fas fa-chart-line"></i> Analytics
+                    </a>
+                </li>
+            </ul>
+            <div class="sidebar-footer">
+                <div class="help-card">
+                    <i class="fas fa-headset"></i>
+                    <h4>Need Help?</h4>
+                    <p>Contact our 24/7 provider support</p>
+                    <button class="btn btn-outline btn-sm">Contact Support</button>
+                </div>
+            </div>
+        </aside>
+
+        <main class="dashboard-main">
+            <div class="dashboard-header">
+                <div class="header-content">
+                    <h1>Dashboard Overview</h1>
+                    <p class="text-muted">Here's how your business is performing</p>
+                </div>
+                <div class="quick-actions">
+                    <button class="btn btn-outline"><i class="fas fa-download"></i> Download Report</button>
+                    <button class="btn btn-primary"><i class="fas fa-plus"></i> Add New Service</button>
+                </div>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card primary">
+                    <div class="stat-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <div class="stat-content">
+                        <p class="stat-label">Today's Bookings</p>
+                        <h3 class="stat-value">5</h3>
+                        <p class="stat-change positive">
+                            <i class="fas fa-arrow-up"></i> 12% from yesterday
+                        </p>
+                    </div>
+                </div>
+                <div class="stat-card success">
+                    <div class="stat-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <div class="stat-content">
+                        <p class="stat-label">Today's Earnings</p>
+                        <h3 class="stat-value">$350</h3>
+                        <p class="stat-change positive">
+                            <i class="fas fa-arrow-up"></i> 8% from yesterday
+                        </p>
+                    </div>
+                </div>
+                <div class="stat-card warning">
+                    <div class="stat-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="stat-content">
+                        <p class="stat-label">Overall Rating</p>
+                        <h3 class="stat-value">4.8</h3>
+                        <p class="stat-change">
+                            <i class="fas fa-star"></i> 28 new reviews
+                        </p>
+                    </div>
+                </div>
+                <div class="stat-card info">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-content">
+                        <p class="stat-label">Total Customers</p>
+                        <h3 class="stat-value">128</h3>
+                        <p class="stat-change positive">
+                            <i class="fas fa-arrow-up"></i> 5 new today
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-grid">
+                <section class="dashboard-card upcoming-bookings">
+                    <div class="card-header">
+                        <h2><i class="fas fa-calendar-day"></i> Today's Schedule</h2>
+                        <div class="card-actions">
+                            <button class="btn btn-icon"><i class="fas fa-ellipsis-v"></i></button>
+                        </div>
+                    </div>
+                    <div class="booking-timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-time">09:00 AM</div>
+                            <div class="timeline-content">
+                                <div class="booking-card">
+                                    <img src="https://ui-avatars.com/api/?name=Sarah+Johnson&background=4CAF50&color=fff" alt="Customer" class="customer-avatar">
+                                    <div class="booking-details">
+                                        <h4>AC Repair</h4>
+                                        <p class="customer-name">Sarah Johnson</p>
+                                        <p class="location"><i class="fas fa-map-marker-alt"></i> 123 Main St</p>
+                                    </div>
+                                    <div class="booking-actions">
+                                        <button class="btn btn-sm btn-outline">View Details</button>
+                                        <div class="status-badge pending">Pending</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-time">02:30 PM</div>
+                            <div class="timeline-content">
+                                <div class="booking-card">
+                                    <img src="https://ui-avatars.com/api/?name=Mike+Smith&background=2196F3&color=fff" alt="Customer" class="customer-avatar">
+                                    <div class="booking-details">
+                                        <h4>Plumbing Service</h4>
+                                        <p class="customer-name">Mike Smith</p>
+                                        <p class="location"><i class="fas fa-map-marker-alt"></i> 456 Oak Ave</p>
+                                    </div>
+                                    <div class="booking-actions">
+                                        <button class="btn btn-sm btn-outline">View Details</button>
+                                        <div class="status-badge confirmed">Confirmed</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="provider-bookings.html" class="btn btn-link">View All Bookings <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </section>
+
+                <section class="dashboard-card recent-reviews">
+                    <div class="card-header">
+                        <h2><i class="fas fa-star"></i> Recent Reviews</h2>
+                        <div class="card-actions">
+                            <button class="btn btn-icon"><i class="fas fa-ellipsis-v"></i></button>
+                        </div>
+                    </div>
+                    <div class="review-list">
+                        <div class="review-card">
+                            <div class="review-header">
+                                <img src="https://ui-avatars.com/api/?name=Emily+Brown&background=FF9800&color=fff" alt="Customer" class="customer-avatar">
+                                <div class="review-meta">
+                                    <h4>Emily Brown</h4>
+                                    <div class="review-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <span class="rating-date">2 hours ago</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="review-text">"Excellent service! John was very professional and completed the job quickly. Would definitely recommend!"</p>
+                            <div class="review-service">
+                                <i class="fas fa-tools"></i> AC Repair Service
+                            </div>
+                        </div>
+                        <div class="review-card">
+                            <div class="review-header">
+                                <img src="https://ui-avatars.com/api/?name=David+Wilson&background=9C27B0&color=fff" alt="Customer" class="customer-avatar">
+                                <div class="review-meta">
+                                    <h4>David Wilson</h4>
+                                    <div class="review-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <span class="rating-date">1 day ago</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="review-text">"Great work on the plumbing issue. Fixed it right away and kept everything clean."</p>
+                            <div class="review-service">
+                                <i class="fas fa-wrench"></i> Plumbing Service
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="provider-reviews.html" class="btn btn-link">View All Reviews <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

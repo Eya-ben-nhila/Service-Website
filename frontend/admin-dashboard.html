@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - SkillBridge</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="dashboard-body">
+    <nav class="navbar dashboard-nav">
+        <div class="container">
+            <a href="index.html" class="logo">SkillBridge</a>
+            <div class="nav-right">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search users, services, or transactions...">
+                </div>
+                <div class="nav-icons">
+                    <div class="notification-bell">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">5</span>
+                    </div>
+                    <div class="messages-icon">
+                        <i class="fas fa-envelope"></i>
+                        <span class="notification-badge">3</span>
+                    </div>
+                    <div class="user-menu">
+                        <div class="user-info">
+                            <img src="https://ui-avatars.com/api/?name=Admin&background=FF5722&color=fff" alt="Profile" class="user-avatar">
+                            <span class="user-name">Admin</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <ul class="dropdown">
+                            <li><a href="#profile"><i class="fas fa-user-circle"></i> Profile</a></li>
+                            <li><a href="#settings"><i class="fas fa-cog"></i> Settings</a></li>
+                            <li><a href="#help"><i class="fas fa-question-circle"></i> Help Center</a></li>
+                            <li class="divider"></li>
+                            <li><a href="login.html" class="logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <aside class="dashboard-sidebar">
+            <div class="sidebar-header">
+                <span class="welcome-text">Welcome,</span>
+                <h3>Administrator</h3>
+                <p class="status-text"><i class="fas fa-circle online"></i> Super Admin</p>
+            </div>
+            <ul class="sidebar-menu">
+                <li class="active">
+                    <a href="#overview">
+                        <i class="fas fa-th-large"></i> Overview
+                    </a>
+                </li>
+                <li>
+                    <a href="#users">
+                        <i class="fas fa-users"></i> Users
+                        <span class="menu-badge">1.2k</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#services">
+                        <i class="fas fa-briefcase"></i> Services
+                        <span class="menu-badge">450</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#providers">
+                        <i class="fas fa-user-tie"></i> Service Providers
+                        <span class="menu-badge">280</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#transactions">
+                        <i class="fas fa-money-bill-wave"></i> Transactions
+                        <span class="menu-badge">89</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#reports">
+                        <i class="fas fa-chart-bar"></i> Reports
+                    </a>
+                </li>
+                <li>
+                    <a href="#verification">
+                        <i class="fas fa-check-circle"></i> Verifications
+                        <span class="menu-badge warning">12</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#support">
+                        <i class="fas fa-headset"></i> Support Tickets
+                        <span class="menu-badge danger">8</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#settings">
+                        <i class="fas fa-cog"></i> Settings
+                    </a>
+                </li>
+            </ul>
+            <div class="sidebar-footer">
+                <div class="help-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h4>Admin Support</h4>
+                    <p>Need technical assistance?</p>
+                    <button class="btn btn-outline btn-sm">Contact IT Support</button>
+                </div>
+            </div>
+        </aside>
+
+        <main class="dashboard-main">
+            <div class="dashboard-header">
+                <div class="header-content">
+                    <h1>Admin Dashboard</h1>
+                    <p class="text-muted">Platform overview and management</p>
+                </div>
+                <div class="quick-actions">
+                    <button class="btn btn-outline"><i class="fas fa-download"></i> Export Report</button>
+                    <button class="btn btn-primary"><i class="fas fa-plus"></i> Add New Admin</button>
+                </div>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card primary">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-content">
+                        <p class="stat-label">Total Users</p>
+                        <h3 class="stat-value">1,234</h3>
+                        <p class="stat-change positive">
+                            <i class="fas fa-arrow-up"></i> 15% this month
+                        </p>
+                    </div>
+                </div>
+                <div class="stat-card success">
+                    <div class="stat-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <div class="stat-content">
+                        <p class="stat-label">Revenue</p>
+                        <h3 class="stat-value">$52,389</h3>
+                        <p class="stat-change positive">
+                            <i class="fas fa-arrow-up"></i> 8% this month
+                        </p>
+                    </div>
+                </div>
+                <div class="stat-card warning">
+                    <div class="stat-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="stat-content">
+                        <p class="stat-label">Active Services</p>
+                        <h3 class="stat-value">450</h3>
+                        <p class="stat-change positive">
+                            <i class="fas fa-arrow-up"></i> 12 new today
+                        </p>
+                    </div>
+                </div>
+                <div class="stat-card info">
+                    <div class="stat-icon">
+                        <i class="fas fa-ticket-alt"></i>
+                    </div>
+                    <div class="stat-content">
+                        <p class="stat-label">Support Tickets</p>
+                        <h3 class="stat-value">8</h3>
+                        <p class="stat-change negative">
+                            <i class="fas fa-arrow-down"></i> 3 resolved today
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-grid">
+                <section class="dashboard-card verification-requests">
+                    <div class="card-header">
+                        <h2><i class="fas fa-user-check"></i> Pending Verifications</h2>
+                        <div class="card-actions">
+                            <button class="btn btn-icon"><i class="fas fa-ellipsis-v"></i></button>
+                        </div>
+                    </div>
+                    <div class="verification-list">
+                        <div class="verification-item">
+                            <img src="https://ui-avatars.com/api/?name=John+Smith&background=4CAF50&color=fff" alt="Provider" class="provider-avatar">
+                            <div class="verification-details">
+                                <h4>John Smith</h4>
+                                <p class="service-type">Plumbing Services</p>
+                                <div class="document-list">
+                                    <span class="document"><i class="fas fa-file-alt"></i> Business License</span>
+                                    <span class="document"><i class="fas fa-id-card"></i> ID Verification</span>
+                                </div>
+                            </div>
+                            <div class="verification-actions">
+                                <button class="btn btn-sm btn-success">Approve</button>
+                                <button class="btn btn-sm btn-danger">Reject</button>
+                                <button class="btn btn-sm btn-outline">Review</button>
+                            </div>
+                        </div>
+                        <div class="verification-item">
+                            <img src="https://ui-avatars.com/api/?name=Sarah+Johnson&background=2196F3&color=fff" alt="Provider" class="provider-avatar">
+                            <div class="verification-details">
+                                <h4>Sarah Johnson</h4>
+                                <p class="service-type">Home Cleaning</p>
+                                <div class="document-list">
+                                    <span class="document"><i class="fas fa-file-alt"></i> Insurance Document</span>
+                                    <span class="document"><i class="fas fa-id-card"></i> ID Verification</span>
+                                </div>
+                            </div>
+                            <div class="verification-actions">
+                                <button class="btn btn-sm btn-success">Approve</button>
+                                <button class="btn btn-sm btn-danger">Reject</button>
+                                <button class="btn btn-sm btn-outline">Review</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#verifications" class="btn btn-link">View All Requests <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </section>
+
+                <section class="dashboard-card recent-activities">
+                    <div class="card-header">
+                        <h2><i class="fas fa-history"></i> Recent Activities</h2>
+                        <div class="card-actions">
+                            <button class="btn btn-icon"><i class="fas fa-ellipsis-v"></i></button>
+                        </div>
+                    </div>
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <div class="activity-icon success">
+                                <i class="fas fa-user-plus"></i>
+                            </div>
+                            <div class="activity-content">
+                                <p class="activity-text">New provider registration: <strong>Elite Cleaning Services</strong></p>
+                                <p class="activity-meta">
+                                    <span class="time">2 hours ago</span>
+                                    <span class="location">New York, USA</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon warning">
+                                <i class="fas fa-exclamation-triangle"></i>
+                            </div>
+                            <div class="activity-content">
+                                <p class="activity-text">Support ticket opened: <strong>Payment Issue #123</strong></p>
+                                <p class="activity-meta">
+                                    <span class="time">3 hours ago</span>
+                                    <span class="priority high">High Priority</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon info">
+                                <i class="fas fa-dollar-sign"></i>
+                            </div>
+                            <div class="activity-content">
+                                <p class="activity-text">Large transaction: <strong>$2,500</strong></p>
+                                <p class="activity-meta">
+                                    <span class="time">5 hours ago</span>
+                                    <span class="status">Completed</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#activities" class="btn btn-link">View All Activities <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </section>
+            </div>
+
+            <div class="dashboard-grid">
+                <section class="dashboard-card performance-chart">
+                    <div class="card-header">
+                        <h2><i class="fas fa-chart-line"></i> Platform Performance</h2>
+                        <div class="card-actions">
+                            <select class="form-select">
+                                <option>Last 7 Days</option>
+                                <option>Last 30 Days</option>
+                                <option>Last 3 Months</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <!-- Chart will be rendered here by JavaScript -->
+                        <div class="placeholder-chart">
+                            <div class="chart-bars">
+                                <div class="chart-bar" style="height: 60%;"></div>
+                                <div class="chart-bar" style="height: 80%;"></div>
+                                <div class="chart-bar" style="height: 40%;"></div>
+                                <div class="chart-bar" style="height: 70%;"></div>
+                                <div class="chart-bar" style="height: 90%;"></div>
+                                <div class="chart-bar" style="height: 50%;"></div>
+                                <div class="chart-bar" style="height: 75%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="dashboard-card quick-actions">
+                    <div class="card-header">
+                        <h2><i class="fas fa-bolt"></i> Quick Actions</h2>
+                    </div>
+                    <div class="quick-actions-grid">
+                        <button class="quick-action-btn">
+                            <i class="fas fa-user-plus"></i>
+                            <span>Add User</span>
+                        </button>
+                        <button class="quick-action-btn">
+                            <i class="fas fa-cog"></i>
+                            <span>Settings</span>
+                        </button>
+                        <button class="quick-action-btn">
+                            <i class="fas fa-file-alt"></i>
+                            <span>Reports</span>
+                        </button>
+                        <button class="quick-action-btn">
+                            <i class="fas fa-bell"></i>
+                            <span>Notifications</span>
+                        </button>
+                        <button class="quick-action-btn">
+                            <i class="fas fa-envelope"></i>
+                            <span>Messages</span>
+                        </button>
+                        <button class="quick-action-btn">
+                            <i class="fas fa-chart-pie"></i>
+                            <span>Analytics</span>
+                        </button>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
